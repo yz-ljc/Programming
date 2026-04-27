@@ -1,0 +1,19 @@
+p{
+    color: #1eabb8;
+}
+.titles{
+    color: #333333;
+}
+.table_elm{
+    background-color: #d0ead7
+}
+.table_head{
+    background-color: #87dcb7;
+}
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+}

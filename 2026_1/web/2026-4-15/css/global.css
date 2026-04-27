@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.global_header ul li {
+    margin-right: 15px;
+    color: white;
+    display: inline-block;
+}
+
+.global_header ul {
+    float: right;
+    list-style: none;
+}
+
+.global_header ul li a:hover {
+    color: #ffd700;
+}
+
+.global_header {
+    display: block;
+    background: #003366;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.global_header h2 {
+    float: left;
+    margin-left: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.global_header ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.global_header .last {
+    margin-right: 30px;
+}
+
+.global_footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 30px;
+}
+
+.global_footer a {
+    color: #9da7aa;
+}
+
+.global_body {
+    background: #ececec;
+    line-height: 1.5;
+    margin: auto;
+    padding: 30px 300px 30px 300px;
+    flex: 1;
+}
+
+.global_body .card {
+    display: flex;
+    margin: 50px auto;
+    gap: 20px;
+    border: 5px;
+    align-items: center;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.global_body .card-img {
+    flex: 1;
+    margin: auto;
+    flex-shrink: 0;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.global_body .card-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.global_body .card-text {
+    flex: 1;
+}
+
+.global_body .card-text .card-title h3 {
+    text-align: center;
+    width: 100%;
+}

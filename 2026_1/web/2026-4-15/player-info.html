@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YZ_Ljc_ Network - 信息填写</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #ececec;
+        }
+
+        .form_container {
+            background: #fff;
+            margin: 40px auto;
+            width: 40%;
+            max-width: 800px;
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .form_container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form_container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .form_container table td:first-child {
+            width: 40px;
+            text-align: center;
+            color: #666;
+        }
+
+        .form_container table td:last-child {
+            padding: 10px;
+        }
+
+        .form_container input,
+        .form_container select,
+        .form_container textarea {
+            width: 100%;
+            height: 40px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            padding: 0 10px;
+        }
+
+        .form_container input[type=color] {
+            max-width: 50px;
+            height: 30px;
+        }
+
+        .form_container input[type=file] {
+            height: 30px;
+        }
+
+        .form_container textarea {
+            height: auto;
+            padding: 10px;
+            resize: none;
+        }
+
+        .form_container input[type="checkbox"],
+        .form_container input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .form_container button {
+            width: 100%;
+            height: 40px;
+            border: none;
+            background: #069c70;
+            color: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn-reset {
+            background: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="global_header">
+        <h2>YZ_Ljc_ Network</h2>
+        <ul style="list-style: none; padding: 0">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="scenery.html">场景介绍</a></li>
+            <li><a href="form.html">社区数据</a></li>
+            <li><a href="player-info.html">信息收集</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li class="last"><a href="login.html">登陆</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="form_container">
+    <form action="http://localhost:8080/api/v1/method" method="post">
+        <h2>完善个人信息</h2>
+
+        <table>
+            <tr>
+                <td><i class="fas fa-user"></i></td>
+                <td><input type="text" required placeholder="请输入用户名"></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-lock"></i></td>
+                <td><input type="password" required placeholder="请输入密码"></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-envelope"></i></td>
+                <td><input type="email" required placeholder="请输入邮箱"></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-phone"></i></td>
+                <td><input type="tel" required placeholder="请输入手机号"></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-globe"></i></td>
+                <td><input type="url" placeholder="个人网站"></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-hashtag"></i></td>
+                <td><input type="number" placeholder="年龄"></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-city"></i></td>
+                <td><input type="text" placeholder="城市"></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-search"></i></td>
+                <td><input type="search" placeholder="搜索"></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-calendar"></i></td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-clock"></i></td>
+                <td><input type="time"></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-palette"></i></td>
+                <td><input type="color"></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-sliders"></i></td>
+                <td><input type="range"></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-file"></i></td>
+                <td><input type="file" accept="image/*"></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-check-square"></i></td>
+                <td>
+                    <label><input type="checkbox"> 阅读</label>
+                    <label><input type="checkbox"> 旅行</label>
+                    <label><input type="checkbox"> 烹饪</label>
+                </td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-venus-mars"></i></td>
+                <td>
+                    <label><input type="radio" name="gender"> 男</label>
+                    <label><input type="radio" name="gender"> 女</label>
+                </td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-list"></i></td>
+                <td>
+                    <select>
+                        <option>请选择学历</option>
+                        <option>本科</option>
+                        <option>硕士</option>
+                        <option>博士</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-pen"></i></td>
+                <td><textarea rows="4" placeholder="个人简介"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">提交</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="reset" class="btn-reset">重置</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<footer>
+    <div class="global_footer">
+        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=12010302002733" target="_blank">
+            <img src="./img/ga.png" width="15" height="15">
+            <span>津公网安备12010302002733号</span>
+        </a>
+        <span>|</span>
+        <a href="https://beian.miit.gov.cn/" target="_blank">津ICP备2025039810号-1</a>
+    </div>
+</footer>
+
+</body>
+</html>

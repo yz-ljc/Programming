@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格专题</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #ececec;
+            line-height: 1.5;
+        }
+
+        .form_container {
+            background: #fff;
+            border: 5px;
+            margin: 50px auto;
+            max-width: 40%;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .form_container h2 {
+            text-align: center;
+            align-items: center;
+        }
+        .form_container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .form_container table td:first-child {
+            text-align: left;
+            font-weight: bold;
+            width: 30%;
+        }
+        .form_container table td:last-child {
+            padding: 10px 10px;
+            text-align: left;
+        }
+        .form_container input,select,textarea {
+            width: 100%;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .form_container input:focus,select:focus,textarea:focus {
+            border-color: #beeae4;
+        }
+        .form_container input[type="color"] {
+            max-width: 30px;
+        }
+        .form_container input[type="radio"] input[type="checkbox"] {
+            width: auto;
+            margin-right: 6px;
+            accent-color: #1eabb8;
+        }
+        .form_container table tr:has(input[type="radio"]) tr:has(input[type="checkbox"]) td:last-child {
+            display: flex;
+            gap: 25px;
+            flex-wrap: nowrap;
+        }
+        .form_container table td:last-child label {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+<div class="form_container">
+    <form action="http://localhost:8080/api/v1/method" method="post">
+        <h2>完善个人信息</h2>
+        <table>
+            <tr>
+                <td><i class="fas fa-user"></i></td>
+                <td><input type="text" id="user_name" required placeholder="请输入您的用户名"/></td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="password" id="user_password" required placeholder="请输入密码"/></td>
+            </tr>
+            <tr>
+                <td>邮箱</td>
+                <td><input type="email" id="user_email" required placeholder="请输入邮箱"/></td>
+            </tr>
+            <tr>
+                <td>手机号</td>
+                <td><input type="tel" id="user_tel_num" required placeholder="请输入手机号"></td>
+            </tr>
+            <tr>
+                <td>个人网站</td>
+                <td><input type="url" id="user_url" placeholder="输入个人网址（选填）"></td>
+            </tr>
+            <tr>
+                <td>年龄</td>
+                <td><input type="number" id="user_age" placeholder="输入年龄"></td>
+            </tr>
+            <tr>
+                <td>城市</td>
+                <td>
+                    <input type="text" list="city_list" placeholder="城市">
+                    <datalist id="city_list">
+                        <option value="北京">
+                        <option value="上海">
+                        <option value="广州">
+                        <option value="深圳">
+                        <option value="杭州">
+                        <option value="南京">
+                        <option value="成都">
+                        <option value="重庆">
+                        <option value="武汉">
+                        <option value="西安">
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>搜索</td>
+                <td><input type="search" placeholder="输入关键词"></td>
+            </tr>
+            <tr>
+                <td>生日</td>
+                <td><input type="date" placeholder="出生年月日"></td>
+            </tr>
+            <tr>
+                <td>时间</td>
+                <td><input type="time" placeholder="时间"></td>
+            </tr>
+            <tr>
+                <td>月份</td>
+                <td><input type="month" placeholder="月份"></td>
+            </tr>
+            <tr>
+                <td>颜色</td>
+                <td><input type="color" placeholder="选择颜色"></td>
+            </tr>
+            <tr>
+                <td>范围滑动</td>
+                <td><input type="range" placeholder="范围"></td>
+            </tr>
+            <tr>
+                <td>文件上传</td>
+                <td><input type="file" placeholder="选择文件" accept="image/*"></td>
+            </tr>
+            <tr>
+                <td>复选框</td>
+                <td>
+                    <label><input type="checkbox" name="hobby" value="reading"> 阅读</label>
+                    <label><input type="checkbox" name="hobby" value="traveling"> 旅行</label>
+                    <label><input type="checkbox" name="hobby" value="cooking"> 烹饪</label>
+                </td>
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td>
+                    <label><input type="radio" name="gender" value="male"> 男</label>
+                    <label><input type="radio" name="gender" value="female"> 女</label>
+                    <label><input type="radio" name="gender" value="other"> 不愿透露</label>
+                </td>
+            </tr>
+            <tr>
+                <td>下拉选择</td>
+                <td>
+                    <select name="education">
+                        <option value="">请选择学历</option>
+                        <option value="high_school">高中</option>
+                        <option value="bachelor">本科</option>
+                        <option value="master">硕士</option>
+                        <option value="doctor">博士</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>个人简介</td>
+                <td>
+                    <label>
+                        <textarea rows="4" cols="50">Introduction</textarea>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">提交</button>
+                </td>
+                <td>
+                    <button type="reset">重置</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
