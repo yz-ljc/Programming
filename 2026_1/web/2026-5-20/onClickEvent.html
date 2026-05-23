@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ClickEvent</title>
+</head>
+<body>
+<label>添加一个爱好 <input type="text" id="input"> </label>
+<button id="addButton">新增选项</button>
+<div id="text"></div>
+<ul id="list">
+    <li>This is a example text.</li>
+</ul>
+<script>
+    let list = document.getElementById("list");
+    let button = document.getElementById("addButton");
+    button.addEventListener("click", function (event) {
+        if (document.getElementById("input").value !== null && document.getElementById("input").value !== "") {
+            let li = document.createElement("li");
+            li.innerHTML = document.getElementById("input").value;
+            list.appendChild(li);
+            window.alert("You clicked the add button and called the onUserClick Event!")
+        }
+    })
+</script>
+</body>
+</html>
