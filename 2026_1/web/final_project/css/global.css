@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 全局样式表，所有页面的body和默认的header footer都拿这个跑的 */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.global_header ul li {
+    margin-right: 15px;
+    color: white;
+    display: inline-block;
+}
+
+.global_header ul {
+    float: right;
+    list-style: none;
+}
+
+.global_header ul li a:hover {
+    color: #ffd700;
+}
+
+.global_header {
+    display: block;
+    background: #003366;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.global_header h2 {
+    float: left;
+    margin-left: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.global_header ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.global_header .last {
+    margin-right: 30px;
+}
+
+.global_footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 30px;
+}
+
+.global_footer a {
+    color: #9da7aa;
+}
+
+.global_body {
+    line-height: 1.5;
+    margin: auto;
+    padding: 30px 300px 30px 300px;
+    flex: 1;
+}
+
+.global_body .card {
+    display: flex;
+    margin: 50px auto;
+    gap: 20px;
+    border: none;
+    padding: 24px;
+    align-items: center;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:
+            0 10px 40px rgba(0, 0, 0, 0.12),
+            0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.global_body .card-img {
+    flex: 1;
+    margin: auto;
+    flex-shrink: 0;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.global_body .card-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.global_body .card-text {
+    flex: 1;
+}
+
+.global_body .card-text .card-title h3 {
+    text-align: center;
+    width: 100%;
+}
+
+/* 下面这些给指令帮助页用的 */
+.command-title-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #069c70;
+}
+
+.command-title-card h3 {
+    text-align: center;
+    margin: 0;
+    color: #333;
+}
+
+.command-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.command-table th {
+    background: #069c70;
+    color: #fff;
+    padding: 12px 16px;
+    font-weight: 600;
+    border: 1px solid #069c70;
+}
+
+.command-table td {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    color: #444;
+}
+
+.command-table tr:nth-child(even) td {
+    background: #f9fafb;
+}
+
+.command-table tr:hover td {
+    background: #eef7f2;
+}
+
+.command-table code {
+    background: #f0f0f0;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #069c70;
+}
+
+/* 下面这些给音视频页用的 */
+.card_column {
+    margin: 50px auto;
+    gap: 20px;
+    border: none;
+    padding: 24px;
+    align-items: center;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:
+            0 10px 40px rgba(0, 0, 0, 0.12),
+            0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card_column .video_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    margin: 20px 0;
+}
+
+.card_column .video_title h3 {
+    margin: 0;
+    padding: 0 20px;
+    font-size: 24px;
+    color: #003366;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+}
+
+.card_column .video_title::before,
+.card_column .video_title::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: #003366;
+}
+
+.card_column .video {
+    display: flex;
+    justify-content: center;
+}
+
+.card_column .content {
+    margin-top: 30px;
+}
+
+.card_column .content ul li {
+    margin-bottom: 10px;
+}
+
+.card_column .music {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background: #f8f9fa;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border-left: 4px solid #daa3d6;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease;
+}
+
+/* 这渲染鼠标集中时的特效用的，超纲内容仅供娱乐的 */
+.card_column .music:hover {
+    box-shadow: 0 4px 20px rgba(202, 109, 248, 0.15);
+}
+
+.card_column .music img {
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.card_column .music audio {
+    flex: 1;
+    min-width: 0;
+}
+
+/* 服务器状态页专用内容 */
+.card_column .card-content {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 16px;
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow:
+            0 10px 40px rgba(128, 213, 171, 0.12),
+            0 2px 8px rgba(45, 212, 218, 0.06);
+}
+
+.result-card {
+    display: none;
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    border-left: 4px solid #ff6b35;
+}
+
+.result-card .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-card .name {
+    font-weight: 600;
+}
+
+.result-card .status {
+    padding: 2px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.result-card .info {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.notfoundserver {
+    display: none;
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    border-left: 4px solid #dd0b0b;
+}

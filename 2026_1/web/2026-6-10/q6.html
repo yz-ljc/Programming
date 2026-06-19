@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 6</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p {
+            display: flex;
+            flex-basis: 100%;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <input placeholder="输入一个年份" id="input">
+    <button id="btn">判断</button>
+    <p id="result"></p>
+</div>
+<script>
+    let year = document.getElementById("input");
+    let btn = document.getElementById("btn");
+
+    function isYear(year) {
+        return year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0);
+    }
+
+    btn.onclick = function () {
+        let yearNum = Number(year.value);
+        if (isNaN(yearNum) || isNaN(yearNum) || yearNum < 0) {
+            window.alert("请输入有效年份")
+        } else {
+            if (isYear(yearNum)) {
+                result.innerText = yearNum + "年是闰年";
+            } else {
+                result.innerText = yearNum + "年不是闰年";
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

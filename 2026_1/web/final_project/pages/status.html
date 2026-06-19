@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../img/emaandsherii.png">
+    <link rel="stylesheet" type="text/css" href="../css/global.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>YZ_Ljc_ Network 社区 - 服务器状态</title>
+</head>
+<body>
+<header>
+    <div class="global_header">
+        <h2>YZ_Ljc_ Network 社区</h2>
+        <ul style="list-style: none; padding: 0">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="scenery.html">场景介绍</a></li>
+            <li><a href="commands.html">指令帮助</a></li>
+            <li><a href="player-info.html">信息收集</a></li>
+            <li><a href="status.html">服务器状态</a></li>
+            <li class="last"><a href="login.html">登陆</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="global_body">
+    <div class="card_column">
+        <div class="card-text">
+            <div class="card-title">
+                <div class="command-title-card">
+                    <!-- 这里实在不想再画一个特效了直接复用了 -->
+                    <h3>社区服务器状态查询</h3>
+                </div>
+                <p style="text-align: center; padding: 20px; color: #666;">可用服务器：lobby, mini1A, mega1A, limbo, 再下方输入对应的服务器编号查询</p>
+            </div>
+        </div>
+        <div class="card-content">
+            <label>
+                <i class="fa-solid fa-search"></i>
+                <input placeholder="点击此处查询" id="server">
+                <button id="check">查询</button>
+            </label>
+        </div>
+        <div id="result" class="result-card">
+            <div class="row">
+                <span class="name" id="resultName">服务器</span>
+                <span class="status" id="resultStatus">在线</span>
+            </div>
+            <div class="info">
+                玩家数: <span id="resultPlayers">0</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/status.js"></script>
+
+<footer>
+    <div class="global_footer">
+        <span>Copyright © 2026 YZ_Ljc_ 版权所有，仅供学习交流</span>
+    </div>
+</footer>
+
+</body>
+</html>

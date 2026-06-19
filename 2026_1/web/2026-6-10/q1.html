@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 1</title>
+    <style>
+        p{
+            font-size: 20px;
+        }
+        button {
+            width: 80px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p id="hello">你好</p>
+    <button id="button">点击切换</button>
+</div>
+<script>
+    let text = document.getElementById('hello');
+    let button = document.getElementById('button');
+    let flag = false;
+
+    button.onclick = function () {
+        if (flag) {
+            text.innerText = "加油"
+        } else {
+            text.innerText = "你好"
+        }
+        flag = !flag;
+    }
+</script>
+</body>
+</html>

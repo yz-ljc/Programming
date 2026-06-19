@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h2>课程总评成绩计算</h2>
+<div>
+    评分方案：
+    <select id="rateSelect">
+        <option value="1">期末70% + 平时30%</option>
+        <option value="2">期末60% + 平时40%</option>
+    </select>
+</div>
+<div>
+    平时成绩：
+    <input type="number" id="usualScore" placeholder="输入0~100的分数">
+</div>
+<div>
+    期末成绩：
+    <input type="number" id="finalScore" placeholder="输入0~100的分数">
+</div>
+<button onclick="calcScore()">计算总评成绩</button>
+<div id="result"></div>
+
+<script>
+    function calcScore() {
+        let flag = document.getElementById("rateSelect");
+        let result = document.getElementById("result");
+        let usualScore = document.getElementById("usualScore").value;
+        let finalScore = document.getElementById("finalScore").value;
+        if (usualScore > 100 || finalScore > 100) {
+            document.getElementById("result").innerHTML = "无效成绩，范围0-100";
+            return;
+        }
+        if (flag.value === "1") {
+            let outcome = usualScore * 0.3 + finalScore * 0.7
+            result.innerText = "最终成绩为: " + outcome.toFixed(1)
+        } else {
+            let outcome = usualScore * 0.4 + finalScore * 0.6
+            result.innerText = "最终成绩为: " + outcome.toFixed(1)
+        }
+    }
+</script>
+
+</body>
+</html>

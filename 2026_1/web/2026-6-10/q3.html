@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 3</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            margin: 50px;
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="box" class="box">
+    <p>点击切换颜色</p>
+</div>
+<script>
+    let area = document.getElementById('box');
+    let flag = true;
+
+    area.addEventListener('click', (e) => {
+        if (flag) {
+            area.style.backgroundColor = "green"
+        } else {
+            area.style.backgroundColor = "red"
+        }
+        flag = !flag;
+    })
+
+</script>
+</body>
+</html>

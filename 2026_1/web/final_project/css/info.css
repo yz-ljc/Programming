@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ececec;
+}
+
+.form_container {
+    background: #fff;
+    margin: 40px auto;
+    width: 40%;
+    max-width: 800px;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.form_container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form_container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form_container table td:first-child {
+    width: 40px;
+    text-align: center;
+    color: #666;
+}
+
+.form_container table td:last-child {
+    padding: 10px;
+}
+
+.form_container input,
+.form_container select,
+.form_container textarea {
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+}
+
+.form_container input[type=color] {
+    max-width: 50px;
+    height: 30px;
+}
+
+.form_container input[type=file] {
+    height: 30px;
+}
+
+.form_container textarea {
+    height: auto;
+    padding: 10px;
+    resize: none;
+}
+
+.form_container input[type="checkbox"],
+.form_container input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.form_container button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: #069c70;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-reset {
+    background: #999;
+}

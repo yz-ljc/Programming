@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 5</title>
+    <style>
+        input {
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 20px;
+        }
+
+        div {
+            gap: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        p {
+            font-size: 20px;
+            flex-basis: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input placeholder="输入一个数字" id="input">
+    <button id="btn">判断</button>
+    <p id="result"></p>
+</div>
+
+<script>
+    let input = document.getElementById('input');
+    let btn = document.getElementById('btn');
+    let result = document.getElementById('result');
+
+    btn.onclick = function () {
+        let num = Number(input.value);
+
+        if (isNaN(num) || input.value === '') {
+            result.innerText = "不是数字"
+        } else if (num > 0) {
+            result.innerText = "正数"
+        } else if (num < 0) {
+            result.innerText = "负数"
+        } else if (num === 0) {
+            result.innerText = "0"
+        } else {
+            result.innerText = "不是数字"
+        }
+    }
+
+</script>
+</body>
+</html>

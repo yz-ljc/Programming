@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 4</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p {
+            display: flex;
+            flex-basis: 100%;
+        }
+        input {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <input placeholder="输入内容" id="input">
+    <button id="btn">显示结果</button>
+    <p id="result"></p>
+</div>
+<script>
+    let btn = document.getElementById("btn");
+    let input = document.getElementById("input");
+    let result = document.getElementById("result");
+
+    btn.onclick = function () {
+        result.innerText = input.value;
+    }
+
+</script>
+</body>
+</html>
