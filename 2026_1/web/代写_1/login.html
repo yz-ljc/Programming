@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录注册 - 旅游推荐网</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <div class="nav">
+        <a href="index.html">首页</a>
+        <a href="login.html" class="active">登录注册</a>
+        <a href="media.html">旅游视频</a>
+        <a href="table.html">旅游攻略</a>
+        <a href="about.html">关于我们</a>
+    </div>
+
+    <div class="container">
+        <h1>用户登录 / 注册</h1>
+
+        <!-- 切换按钮 -->
+        <div class="tab-btns">
+            <button id="tab-login" class="active-tab" onclick="showLogin()">登录</button>
+            <button id="tab-register" onclick="showRegister()">注册</button>
+        </div>
+
+        <!-- 登录表单 -->
+        <div id="login-form" class="form-container">
+            <h2>登录</h2>
+            <form onsubmit="return checkLogin()" novalidate>
+                <div class="form-group">
+                    <label for="username">用户名：</label>
+                    <input type="text" id="username" name="username" placeholder="请输入用户名" required>
+                    <div id="user-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">密码：</label>
+                    <input type="password" id="password" name="password" placeholder="请输入密码" required>
+                    <div id="pass-error"></div>
+                </div>
+
+                <div style="text-align:center; margin-top:20px;">
+                    <button type="submit" class="btn">登录</button>
+                    <button type="reset" class="btn btn-reset">重置</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- 注册表单 -->
+        <div id="register-form" class="form-container" style="display:none;">
+            <h2>注册新账号</h2>
+            <form onsubmit="return checkRegister()" novalidate>
+                <div class="form-group">
+                    <label for="reg-username">用户名：</label>
+                    <input type="text" id="reg-username" name="reg-username" placeholder="请输入用户名" required>
+                    <div id="reg-user-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-email">邮箱：</label>
+                    <input type="email" id="reg-email" name="reg-email" placeholder="请输入邮箱" required>
+                    <div id="reg-email-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password">密码：</label>
+                    <input type="password" id="reg-password" name="reg-password" placeholder="请输入密码" required>
+                    <div id="reg-pass-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password2">确认密码：</label>
+                    <input type="password" id="reg-password2" name="reg-password2" placeholder="请再次输入密码" required>
+                    <div id="reg-pass2-error"></div>
+                </div>
+
+                <div style="text-align:center; margin-top:20px;">
+                    <button type="submit" class="btn">注册</button>
+                    <button type="reset" class="btn btn-reset">重置</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <p>旅游推荐网 © 2026</p>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

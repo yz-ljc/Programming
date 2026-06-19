@@ -39,11 +39,13 @@ check.addEventListener("click", () => {
             status.innerText = "状态: " + "无效";
             resultPlayers.innerText = "无效的服务器标识，请重新输入！";
             resultArea.style.display = "block";
+            window.alert("无效的服务器标识！");
         }
     } else {
         serverName.innerText = "服务器: " + "无效";
         status.innerText = "状态: " + "无效";
         resultPlayers.innerText = "无效的服务器标识，请重新输入！";
         resultArea.style.display = "block";
+        window.alert("无效的服务器标识！");
     }
 });

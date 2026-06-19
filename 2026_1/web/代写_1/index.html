@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅游推荐网 - 首页</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <div class="nav">
+        <a href="index.html" class="active">首页</a>
+        <a href="login.html">登录注册</a>
+        <a href="media.html">旅游视频</a>
+        <a href="table.html">旅游攻略</a>
+        <a href="about.html">关于我们</a>
+    </div>
+
+    <!-- Banner区域 -->
+    <div class="banner">
+        <h2>旅游推荐网</h2>
+        <p id="banner-text">探索世界之美</p>
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="container">
+        <h1>欢迎来到旅游推荐网</h1>
+        <p id="welcome-msg" style="text-align:center; font-size:16px;"></p>
+
+        <!-- 特色目的地 -->
+        <h2>热门目的地</h2>
+        <div class="features">
+            <div class="feature-box">
+                <img src="image/zhangjiajie.png" alt="张家界">
+                <h3>张家界</h3>
+                <p>奇峰异石，云雾缭绕</p>
+                <button class="btn" onclick="toggleContent('detail-zjj')">查看详情</button>
+                <div id="detail-zjj" class="hidden-content">
+                    <p>季节：春秋两季</p>
+                    <p>游玩：3-4天</p>
+                    <p>景点：天门山、袁家界、金鞭溪</p>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <img src="image/sanya.png" alt="三亚">
+                <h3>三亚</h3>
+                <p>碧海蓝天，椰风海韵</p>
+                <button class="btn" onclick="toggleContent('detail-sy')">查看详情</button>
+                <div id="detail-sy" class="hidden-content">
+                    <p>季节：冬季最佳</p>
+                    <p>游玩：4-5天</p>
+                    <p>景点：亚龙湾、天涯海角、蜈支洲岛</p>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <img src="image/lijaing.png" alt="丽江">
+                <h3>丽江古城</h3>
+                <p>小桥流水，古朴民风</p>
+                <button class="btn" onclick="toggleContent('detail-lj')">查看详情</button>
+                <div id="detail-lj" class="hidden-content">
+                    <p>季节：四季皆宜</p>
+                    <p>游玩：3-5天</p>
+                    <p>景点：四方街、玉龙雪山、泸沽湖</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 更多推荐列表 -->
+        <h2>更多推荐</h2>
+        <ul class="card-list">
+            <li>桂林山水 - 漓江泛舟，十里画廊骑行</li>
+            <li>西安古城 - 兵马俑、古城墙、回民街美食</li>
+            <li>九寨沟 - 五彩池水，秋季最佳</li>
+            <li>西藏拉萨 - 布达拉宫，雪域高原</li>
+            <li>杭州西湖 - 江南水乡，断桥残雪</li>
+        </ul>
+
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <p>旅游推荐网 © 2026</p>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
